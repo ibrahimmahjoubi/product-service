@@ -38,4 +38,4 @@ jobs:
         docker build -t ${IMAGE_NAME}-jvm . -f src/main/docker/Dockerfile.jvm
     - name: Push image
       run: |
-        docker push ibrahimdocker/demo-app
+        docker push ${IMAGE_NAME}-jvm:latest
