@@ -12,8 +12,6 @@ jobs:
   build-product-service:
 
     runs-on: ubuntu-latest
-    env:
-      IMAGE_NAME: quarkus-product-service
 
     steps:
     - uses: actions/checkout@v3
@@ -30,7 +28,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: ibrahimdocker/demo-app
-        tags: v1, latest
+        tags: latest
         registry: docker.io
         dockerfile: src/main/docker/Dockerfile.jvm
         username: ${{ secrets.DOCKER_USERNAME }}
