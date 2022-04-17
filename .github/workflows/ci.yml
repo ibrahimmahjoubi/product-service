@@ -31,8 +31,7 @@ jobs:
       with:
         image: ibrahimdocker/demo-app
         tags: latest
-        registry: docker.io
-        directory: src/main/docker/
-        dockerfile: Dockerfile.jvm
+        registry: docker.io/${IMAGE_NAME}-jvm
+        dockerfile: src/main/docker/Dockerfile.jvm
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
